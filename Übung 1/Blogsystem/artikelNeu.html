@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Neuen Artikel erstellen | Max Overlacks Blog</title>
+  </head>
+  <body>
+    <header>
+      <a href="./">
+        <img
+          height="50"
+          src="./medien/logo.jpg"
+          alt="Schemenhafte 2D-Darstellung eines Manns mit rotem Haar, Brille und blauem Oberteil"
+        />
+        <h1>Max Overlacks Blog</h1>
+      </a>
+    </header>
+    <main>
+      <h2>Neuen Artikel erstellen</h2>
+      <form action="./">
+        <label>Überschrift: <input required name="headline" /></label>
+        <label>
+          Anrisstext (Teaser):
+          <textarea cols="75" rows="5" required name="teaser-text"></textarea>
+        </label>
+        <label>
+          Bild:
+          <input
+            type="file"
+            accept=".avif,.webp,.jpeg,.jpg,.png"
+            required
+            name="image"
+          />
+        </label>
+        <label>
+          Artikeltext:
+          <textarea cols="75" rows="25" required name="text"></textarea>
+        </label>
+        <label>
+          Tags (mit Komma getrennt): <input name="tags" />
+        </label>
+        <input type="submit" />
+      </form>
+    </main>
+    <aside>
+      <h2>Login</h2>
+      <form>
+        <label>Benutzername: <input required name="username" /></label>
+        <label>
+          Passwort: <input type="password" required name="password" />
+        </label>
+        <input type="submit" value="Einloggen" />
+      </form>
+      <h2>Suche</h2>
+      <form action="./suchergebnis.html">
+        <input required name="q" />
+        <input type="submit" value="Suchen" />
+      </form>
+      <h2>Monate</h2>
+      <ul>
+        <li><a href="./monatsliste.html">Mai 1970</a></li>
+        <li><a href="./monatsliste.html">April 1970</a></li>
+        <li><a href="./monatsliste.html">März 1970</a></li>
+        <li><a href="./monatsliste.html">Februar 1970</a></li>
+        <li><a href="./monatsliste.html">Januar 1970</a></li>
+      </ul>
+      <h2>Tags</h2>
+      <ul>
+        <li><a href="./tagliste.html">Lorem</a></li>
+        <li><a href="./tagliste.html">Ipsum</a></li>
+        <li><a href="./tagliste.html">Dolor</a></li>
+        <li><a href="./tagliste.html">Sit</a></li>
+        <li><a href="./tagliste.html">Amet</a></li>
+      </ul>
+    </aside>
+    <footer>
+      <a href="./kontakt.html">Kontakt</a>
+      <a href="./impressum.html">Impressum</a>
+    </footer>
+  </body>
+</html>

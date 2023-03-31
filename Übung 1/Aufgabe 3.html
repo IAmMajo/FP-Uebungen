@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Prüfunganmeldung</title>
+  </head>
+  <body>
+    <h1>Prüfungsanmeldung</h1>
+    <form
+      method="POST"
+      action="mailto:info@hochschule-rhein-waal.de"
+      enctype="text/plain"
+    >
+      <label>
+        Matrikelnummer:
+        <input type="number" required min="0" name="Matrikelnummer" />
+      </label>
+      <label>
+        Prüfung:
+        <select name="Pruefung">
+          <option>Medienkonzeption und -gestaltung</option>
+          <option>Lineare Algebra und Operations Research</option>
+          <option>Projektmanagement</option>
+          <option>Algorithmen und Datenstrukturen</option>
+          <option>Fortgeschrittene Programmierung</option>
+          <option>Technische Informatik</option>
+        </select>
+      </label>
+      <input type="submit" value="Anmelden" />
+    </form>
+  </body>
+</html>
