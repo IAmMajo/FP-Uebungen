@@ -1,0 +1,36 @@
+table {
+  border-collapse: collapse;
+  border: 1px solid #70787c;
+  margin: auto;
+}
+
+tr {
+  border: 1px solid #70787c;
+}
+
+tr:first-child {
+  background-color: #dce4e8;
+  font-size: 22px;
+  font-family: sans-serif;
+  color: #40484c;
+}
+
+th, td {
+  padding: 16px;
+}
+
+th:first-child {
+  padding: 16px 18px;
+}
+
+.lecture {
+  background-color: #006781;
+}
+
+.exercise {
+  background-color: #a43c18;
+}
+
+a {
+  color: white;
+}
