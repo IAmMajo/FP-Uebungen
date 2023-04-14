@@ -74,12 +74,8 @@ Betrachten Sie den folgende HTML-Datei:
 
 Formatieren Sie das `div`-Element so, dass es 100 Pixel breit, 200 Pixel hoch und blau gefärbt ist. Wenn das `div`-Element mit der Maus überfahren wird, soll sich innerhalb von zwei Sekunden dessen Hintergrundfarbe von blau auf rot ändern und die Lage um 90 Grad im Uhrzeigersinn drehen:
 
-<table>
-<td>
 ![transition1](uploads/437cf2fd73f389bd859ccfcd5ef1ce31/transition1.png)
-<td>
 ![transition2](uploads/59b1b2d789364311648a66540f501f3a/transition2.png)
-</table>
 
 ### Aufgabe 4
 
@@ -87,7 +83,7 @@ Einfaches Layout erstellen
 
 Setzen Sie ein Layout mit `CSS-Grid` um. Betrachten Sie hierfür folgendes Video, das zwei verschiedene Stile zur Anordnung des _main content_ veranschaulicht. Zunächst sieht man die Anordnung der grünen Boxen untereinander. Anschließend werden im CSS-Code 1 bis 2 Zeilen geändert bzw. hinzugefügt, so dass man ca. bei Sekunde 40 die Anordnung der grünen Boxen nebeneinander sieht.
 
-![Layout mit CSS-Grid](uploads/9ad63599e4123bfc50d8509b9255b33f/grid_block_flex.mp4)
+[Layout mit CSS-Grid](uploads/9ad63599e4123bfc50d8509b9255b33f/grid_block_flex.mp4)
 
 Hinweise: Um diese Aufgabe schneller umzusetzen, machen Sie sich mit folgenden Begriffen vertraut:
 
