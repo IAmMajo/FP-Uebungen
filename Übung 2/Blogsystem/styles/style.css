@@ -1,0 +1,9 @@
+.article-image, textarea {
+  width: 100%;
+}
+
+@media (max-width: 575px) {
+  .manual-responsive {
+    width: 100%;
+  }
+}
