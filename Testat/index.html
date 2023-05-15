@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Schmetterlinge</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./main.js" type="module"></script>
+    <meta id="color-scheme" name="color-scheme" content="light dark" />
+  </head>
+  <body class="surface on-surface-text body-large">
+    <main id="menu">
+      <h1 class="display-large">Schmetterlinge</h1>
+      <h2 class="headline-large">Beschreibung</h2>
+      <p>
+        Du bist ein Maulwurf. Bewege dich mit den Tasten W, A, S und D oder den
+        Pfeiltasten und fange möglichst viele Schmetterlinge. Im Gegensatz zu
+        Schmetterlingen kannst du dich nicht über Blumen bewegen.
+      </p>
+      <ul>
+        <li><md-icon class="pink-butterfly">bug_report</md-icon>1 Punkt</li>
+        <li><md-icon class="orange-butterfly">bug_report</md-icon>2 Punkte</li>
+        <li><md-icon class="blue-butterfly">bug_report</md-icon>3 Punkte</li>
+      </ul>
+      <p>
+        Der
+        <a
+          class="primary-text"
+          href="https://github.com/IAmMajo/FP-Uebungen/Testat"
+          >Quellcode</a
+        >
+        des Spiels ist verfügbar.
+      </p>
+      <h2 class="headline-large">Einstellungen</h2>
+      <md-filled-select id="mode" label="Modus">
+        <md-icon slot="leadingicon">palette</md-icon>
+        <md-select-option selected headline="Systemeinstellung">
+          <md-icon slot="start" data-variant="icon">check</md-icon>
+        </md-select-option>
+        <md-select-option headline="Hell" value="light">
+          <md-icon class="invisible" slot="start" data-variant="icon">
+            check
+          </md-icon>
+        </md-select-option>
+        <md-select-option headline="Dunkel" value="dark">
+          <md-icon class="invisible" slot="start" data-variant="icon">
+            check
+          </md-icon>
+        </md-select-option>
+        <md-icon slot="trailingicon">arrow_drop_down</md-icon>
+      </md-filled-select>
+      <h3 class="title-large">Spieldauer</h3>
+      <md-slider
+        id="duration-slider"
+        min="10"
+        max="900"
+        value="30"
+        withLabel="true"
+        valueLabel="00:30&nbsp;Minuten"
+      ></md-slider>
+      <md-text-button id="reset-duration-button">
+        <md-icon slot="icon">undo</md-icon>
+        Zurücksetzen
+      </md-text-button>
+      <h3 class="title-large">Blumen-Anzahl</h3>
+      <p>
+        Wieviel Fläche des Spielbereichs Blumen einnehmen sollen, wenn man sie
+        nebeneinander aufreihen würde.
+      </p>
+      <md-slider
+        id="flowers-slider"
+        min="0"
+        max="25"
+        value="13"
+        withLabel="true"
+        valueLabel="13%"
+      ></md-slider>
+      <md-text-button id="reset-flowers-button">
+        <md-icon slot="icon">undo</md-icon>
+        Zurücksetzen
+      </md-text-button>
+      <h3 class="title-large">Anzahl pinker Schmetterlinge</h3>
+      <p>
+        Wieviel Fläche des Spielbereichs pinke Schmetterlinge einnehmen sollen,
+        wenn man sie nebeneinander aufreihen würde.
+      </p>
+      <md-slider
+        id="pink-butterflies-slider"
+        min="0"
+        max="25"
+        value="2"
+        withLabel="true"
+        valueLabel="2%"
+      ></md-slider>
+      <md-text-button id="reset-pink-butterflies-button">
+        <md-icon slot="icon">undo</md-icon>
+        Zurücksetzen
+      </md-text-button>
+      <h3 class="title-large">Anzahl oranger Schmetterlinge</h3>
+      <p>
+        Wieviel Fläche des Spielbereichs orange Schmetterlinge einnehmen sollen,
+        wenn man sie nebeneinander aufreihen würde.
+      </p>
+      <md-slider
+        id="orange-butterflies-slider"
+        min="0"
+        max="25"
+        value="2"
+        withLabel="true"
+        valueLabel="2%"
+      ></md-slider>
+      <md-text-button id="reset-orange-butterflies-button">
+        <md-icon slot="icon">undo</md-icon>
+        Zurücksetzen
+      </md-text-button>
+      <h3 class="title-large">Anzahl blauer Schmetterlinge</h3>
+      <p>
+        Wieviel Fläche des Spielbereichs blaue Schmetterlinge einnehmen sollen,
+        wenn man sie nebeneinander aufreihen würde.
+      </p>
+      <md-slider
+        id="blue-butterflies-slider"
+        min="0"
+        max="25"
+        value="2"
+        withLabel="true"
+        valueLabel="2%"
+      ></md-slider>
+      <md-text-button id="reset-blue-butterflies-button">
+        <md-icon slot="icon">undo</md-icon>
+        Zurücksetzen
+      </md-text-button>
+      <p class="space-between">
+        Vollbildmodus deaktivieren
+        <md-switch id="deactivate-fullscreen" showOnlySelectedIcon></md-switch>
+      </p>
+      <md-fab id="play-button" size="large" variant="primary">
+        <md-icon slot="icon">play_arrow</md-icon>
+      </md-fab>
+    </main>
+    <div id="game" class="removed surface">
+      <main id="gameboard" class="primary-container overlay"></main>
+      <aside id="sidebar">
+        <div id="upper-sidebar">
+          <h2 class="headline-large">Punktzahl</h2>
+          <p id="game-points-text">0 Punkte</p>
+          <h2 class="headline-large">Zeit</h2>
+          <p id="time-text">00:30 Minuten</p>
+          <h2 class="headline-large">Schmetterlinge</h2>
+          <ul>
+            <li><md-icon class="pink-butterfly">bug_report</md-icon>1 Punkt</li>
+            <li>
+              <md-icon class="orange-butterfly">bug_report</md-icon>2 Punkte
+            </li>
+            <li>
+              <md-icon class="blue-butterfly">bug_report</md-icon>3 Punkte
+            </li>
+          </ul>
+          <md-outlined-button id="highlight-button" disabled>
+            <md-icon slot="icon">highlight</md-icon>
+            Meine Position hervorheben
+          </md-outlined-button>
+          <md-outlined-button id="pause-button" disabled>
+            <md-icon slot="icon">pause</md-icon>
+            Spiel pausieren
+          </md-outlined-button>
+        </div>
+        <div class="space-between">
+          <md-text-button id="game-menu-button">
+            <md-icon slot="icon">home</md-icon>
+            Zur Startseite gehen
+          </md-text-button>
+          <md-outlined-button id="restart-button">
+            <md-icon slot="icon">restart_alt</md-icon>
+            Neu starten
+          </md-outlined-button>
+        </div>
+      </aside>
+    </div>
+    <main id="end" class="removed">
+      <h1 id="end-points-text" class="display-large">0 Punkte</h1>
+      <md-tonal-button id="again-button">
+        <md-icon slot="icon">play_arrow</md-icon>Erneut spielen
+      </md-tonal-button>
+      <md-outlined-button id="end-menu-button">
+        <md-icon slot="icon">home</md-icon>Zur Startseite gehen
+      </md-outlined-button>
+    </main>
+  </body>
+</html>
