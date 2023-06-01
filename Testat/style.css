@@ -40,7 +40,8 @@ li {
   color: var(--blue-butterfly-color);
 }
 
-md-filled-select, md-slider {
+md-filled-select,
+md-slider {
   min-width: 100%;
 }
 
