@@ -1,0 +1,67 @@
+<h1>Neuer Artikel</h1>
+
+<form action="index.html" method="post">
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text">Überschrift</span>
+    </div>
+    <input
+      [(ngModel)]="article.ueberschrift"
+      class="form-control"
+      name="ueberschrift"
+      type="text"
+    />
+  </div>
+
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text">Autor</span>
+    </div>
+    <input
+      [(ngModel)]="article.autor"
+      class="form-control"
+      name="autor"
+      type="text"
+    />
+  </div>
+
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text">Datum</span>
+    </div>
+    <input
+      [(ngModel)]="article.datum"
+      class="form-control"
+      name="datum"
+      type="date"
+    />
+  </div>
+
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text">Anrisstext</span>
+    </div>
+    <textarea
+      [(ngModel)]="article.anriss"
+      class="form-control"
+      name="anriss"
+      cols="60"
+      rows="4"
+    ></textarea>
+  </div>
+
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text">Artikeltext</span>
+    </div>
+    <textarea
+      [(ngModel)]="article.text"
+      class="form-control"
+      name="text"
+      cols="60"
+      rows="8"
+    ></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Veröffentlichen</button>
+</form>

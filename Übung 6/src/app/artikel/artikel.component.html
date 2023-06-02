@@ -1,0 +1,51 @@
+<article *ngIf="article !== null; else errorMessage">
+  <article class="mt-5">
+    <h2>
+      <a routerLink="/article/{{ article.id }}">{{ article.ueberschrift }}</a>
+    </h2>
+    <div class="row justify-content-between mb-3">
+      <div class="col-6">{{ article.datum }} von {{ article.autor }}</div>
+      <div class="col-3">
+        <a
+          id="editentry-12"
+          class="editentry"
+          routerLink="/artikel-editor/{{ article.id }}"
+          >bearbeiten</a
+        >
+        | <a id="deleteentry-12" class="deleteentry" href="#">löschen</a>
+      </div>
+    </div>
+    <p>
+      <b>{{ article.anriss }}</b>
+    </p>
+    <p>{{ article.text }}</p>
+  </article>
+  <a
+    *ngFor="let tag of article.tags"
+    class="nav-link badge bg-primary"
+    href="tagliste.html?tag={{ tag }}"
+  >
+    {{ tag }}
+  </a>
+  <div>
+    <a
+      title="Facebook"
+      href="https://www.facebook.com/share.php?u=https%3A%2F%2Fmyblog.local%2Farticle%2F{{
+        article.id
+      }}"
+      target="_blank"
+      >Teilen auf Facebook</a
+    >
+    |<a
+      title="Twitter"
+      href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fmyblog.local%2Farticle%2F{{
+        article.id
+      }}&amp;text={{ getEncodedHeadline() }}&amp;via=myblog&amp;lang=de"
+      target="_blank"
+      >Twittern</a
+    >
+    |<a routerLink="/artikel-share">Teilen via E-Mail</a>
+  </div>
+</article>
+
+<ng-template #errorMessage>Ungültige ID</ng-template>
